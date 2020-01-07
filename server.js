@@ -13,7 +13,7 @@ app.get('/student/:id', (req, res) => {
   const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'RedmondDesign18',
+    password: '${process.env.rootpassword}',
     database: 'classmate_database'
   });
   const studentId = req.params.id;
